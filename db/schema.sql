@@ -1,0 +1,2 @@
+DROP DATABASE IF EXISTS automate_db;
+CREATE DATABASE automate_db;
