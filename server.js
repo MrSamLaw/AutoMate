@@ -1,7 +1,6 @@
 const path = require('path');
 const express = require('express');
 const session = require('express-session');
-// EJS 
 const routes = require('./controllers');
 const helpers = require('./utils/helpers');
 
@@ -25,7 +24,7 @@ const sess = {
 app.use(session(sess));
 
 // Inform Express.js on which template engine to use
-// EJS Info required here
+app.set('view engine', 'ejs');
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
