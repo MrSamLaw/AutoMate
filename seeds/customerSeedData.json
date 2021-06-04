@@ -5,8 +5,8 @@
         "address": "2 Beach St",
         "suburb": "Kingsford",
         "postcode": "2032",
-        "phone": 0412123123,
-        "email": "jessluff@email.com",
+        "phone": "0412123123",
+        "email": "jessluff@email.com"
     },
     {
         "name": "Amy Right",
@@ -14,8 +14,8 @@
         "address": "6 Highway Ave",
         "suburb": "Bathurst",
         "postcode": "2065",
-        "phone": 0412123456,
-        "email": "amyright@email.com",
+        "phone": "0412123456",
+        "email": "amyright@email.com"
     },
     {
         "name": "Tom Smith",
@@ -23,7 +23,7 @@
         "address": "9 Tree St",
         "suburb": "Narara",
         "postcode": "2250",
-        "phone": 0412987123,
-        "email": "tomsmith@email.com",
+        "phone": "0412987123",
+        "email": "tomsmith@email.com"
     }
 ]
