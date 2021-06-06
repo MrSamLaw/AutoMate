@@ -37,7 +37,7 @@ Customer.init(
         allowNull: false
     },
     phone: {
-        type: DataTypes.INTEGER,
+        type: DataTypes.STRING,
         allowNull: false,
         validate: {
             isNumeric: true,
@@ -51,12 +51,12 @@ Customer.init(
             isEmail: true
         }
     },
-    car_rego: {
+    vehicle_id: {
         type: DataTypes.STRING,
         allowNull: false,
         references: {
             model: 'vehicle',
-            key: 'rego',
+            key: 'id',
             unique: true
         }
     }
