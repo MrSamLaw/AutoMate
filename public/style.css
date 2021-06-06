@@ -1,6 +1,7 @@
 
-.navbar {
+#navbar {
     justify-content: end;
+    background-color: #1E2633;
 }
 
 .aboutUs {
