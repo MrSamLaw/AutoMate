@@ -2,6 +2,19 @@
 #navbar {
     justify-content: end;
     background-color: #1E2633;
+    
+}
+
+a {
+    color: #f8d9b2;
+}
+
+.jumbotron {
+    background-color: #52B6D6;
+}
+
+h1 {
+    color: #CA0000;
 }
 
 .aboutUs {
