@@ -13,6 +13,17 @@ Job.init(
         primaryKey: true,      
         autoIncrement: true
     },
+    date: {
+        type: DataTypes.DATEONLY,
+        allowNull: false,
+        validate: {
+            isDate: true
+        }
+    },
+    k_travelled: {
+        type: DataTypes.INTEGER,
+        allowNull: false,
+    },
     vehicle_id: {
         type: DataTypes.INTEGER,
         references: {

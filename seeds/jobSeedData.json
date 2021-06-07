@@ -1,0 +1,17 @@
+[
+    {
+        "date": "2021-03-01",
+        "k_travelled": 5000,
+        "vehicle_id": 1
+    },
+    {
+        "date": "2021-06-07",
+        "k_travelled": 10000,
+        "vehicle_id": 3
+    },
+    {
+        "date": "2021-01-25",
+        "k_travelled": 2000,
+        "vehicle_id": 2
+    }
+]
