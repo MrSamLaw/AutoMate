@@ -5,7 +5,7 @@
     
 }
 
-a {
+.nav-link {
     color: #f8d9b2;
 }
 
@@ -17,11 +17,23 @@ h1 {
     color: #CA0000;
 }
 
+h3 {
+    color: #CA0000;
+}
+
 .aboutUs {
     text-align: center;
 }
 
 .aboutText {
     text-align: center;
+}
+
+.button {
+    display: flex;
+}
+
+.submit {
+    justify-content: center;
 }
 
