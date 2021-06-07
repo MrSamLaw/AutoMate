@@ -51,6 +51,7 @@ Customer.init(
             isEmail: true
         }
     },
+    /*
     vehicle_id: {
         type: DataTypes.STRING,
         allowNull: false,
@@ -59,7 +60,7 @@ Customer.init(
             key: 'id',
             unique: true
         }
-    }
+    }*/
   },
   {
     sequelize,
