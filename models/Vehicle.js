@@ -25,14 +25,27 @@ Vehicle.init(
         type: DataTypes.STRING,
         allowNull: false
     },
-    required_service: {
-        type: DataTypes.STRING,
+    kilometers: {
+      type: DataTypes.INTEGER,
+      allowNull: false
+    },
+    /*service_id: {
+        type: DataTypes.INTEGER,
         allowNull: false,
         references: {
             model: 'service',
             key: 'id',
             unique: false
         }
+    },*/
+    customer_id: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      references: {
+        model: 'customer',
+        key: 'id',
+        unique: false,
+      },
     }
   },
   {

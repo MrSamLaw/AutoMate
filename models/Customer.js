@@ -13,7 +13,11 @@ Customer.init(
         primaryKey: true,      
         autoIncrement: true
     },
-    name: {
+    first_name: {
+        type: DataTypes.STRING,
+        allowNull: false
+    },
+    last_name: {
         type: DataTypes.STRING,
         allowNull: false
     },
@@ -51,6 +55,14 @@ Customer.init(
             isEmail: true
         }
     },
+    password: {
+        type: DataTypes.STRING,
+        allowNull: false,
+        validate: {
+            len: [6,20],
+        }
+    }
+    /*
     vehicle_id: {
         type: DataTypes.STRING,
         allowNull: false,
@@ -59,7 +71,7 @@ Customer.init(
             key: 'id',
             unique: true
         }
-    }
+    }*/
   },
   {
     sequelize,

@@ -1,15 +1,23 @@
 const Vehicle = require('./Vehicle');
 const Customer = require('./Customer');
 const Service = require('./Service');
+const Job = require('./Job');
 
 Customer.hasMany(Vehicle, {
-  foreignKey: 'vehicle_id',
+  foreignKey: 'customer_id',
   onDelete: 'CASCADE',
 });
 
-Vehicle.hasMany(Service, {
-    foreignKey: 'required_service',
-    onDelete: 'CASCADE',
-  });
+Vehicle.belongsTo(Customer, {
+  foreignKey: 'customer_id'
+})
 
-module.exports = { Vehicle, Customer, Service };
+Service.belongsToMany(Vehicle, {
+  through: {
+    model: Job,
+    unique: false,
+  },
+  as: 'required_service'
+});
+
+module.exports = { Vehicle, Customer, Service, Job };
