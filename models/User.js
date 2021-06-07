@@ -2,10 +2,10 @@ const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
 // create our model
-class Vehicle extends Model {}
+class User extends Model {}
 
 // create fields/columns for model
-Vehicle.init(
+User.init(
   {
     id: {      
         type: DataTypes.INTEGER,      
@@ -13,48 +13,37 @@ Vehicle.init(
         primaryKey: true,      
         autoIncrement: true
     },
-    rego: {
+    username: {
         type: DataTypes.STRING,
         allowNull: false
     },
-    make: {
-        type: DataTypes.STRING,
-        allowNull: false
-    },
-    model: {
-        type: DataTypes.STRING,
-        allowNull: false
-    },
-    kilometers: {
-      type: DataTypes.INTEGER,
-      allowNull: false
-    },
-    /*service_id: {
-        type: DataTypes.INTEGER,
-        allowNull: false,
-        references: {
-            model: 'service',
-            key: 'id',
-            unique: false
-        }
-    },*/
-    customer_id: {
-      type: DataTypes.INTEGER,
+    password: {
+      type: DataTypes.STRING,
       allowNull: false,
-      references: {
-        model: 'customer',
-        key: 'id',
-        unique: false,
-      },
-    }
+      validate: {
+          len: [6,20],
+      }
+    },
+    first_name: {
+        type: DataTypes.STRING,
+        allowNull: false
+    },
+    last_name: {
+        type: DataTypes.STRING,
+        allowNull: false
+    },
+    isAdmin: {
+        type: DataTypes.BOOLEAN,
+        default: 0,
+    },
   },
   {
     sequelize,
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'vehicle'
+    modelName: 'user'
   }
 );
 
-module.exports = Vehicle;
+module.exports = User;

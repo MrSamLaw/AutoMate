@@ -2,10 +2,10 @@ const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
 // create our model
-class Vehicle extends Model {}
+class Service extends Model {}
 
 // create fields/columns for model
-Vehicle.init(
+Service.init(
   {
     id: {      
         type: DataTypes.INTEGER,      
@@ -27,8 +27,8 @@ Vehicle.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'customer'
+    modelName: 'service'
   }
 );
 
-module.exports = Location;
+module.exports = Service;

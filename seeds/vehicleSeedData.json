@@ -1,0 +1,20 @@
+[
+    {
+        "rego": "ABC123",
+        "make": "Suzuki",
+        "model": "Swift",
+        "kilometers" : 20000
+    },
+    {
+        "rego": "GHJ123",
+        "make": "Mazda",
+        "model": "3",
+        "kilometers" : 35000
+    },
+    {
+        "rego": "A6H893",
+        "make": "Ford",
+        "model": "Triton",
+        "kilometers" : 23000
+    }
+]

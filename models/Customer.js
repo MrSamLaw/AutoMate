@@ -13,7 +13,11 @@ Customer.init(
         primaryKey: true,      
         autoIncrement: true
     },
-    name: {
+    first_name: {
+        type: DataTypes.STRING,
+        allowNull: false
+    },
+    last_name: {
         type: DataTypes.STRING,
         allowNull: false
     },
@@ -37,7 +41,7 @@ Customer.init(
         allowNull: false
     },
     phone: {
-        type: DataTypes.INTEGER,
+        type: DataTypes.STRING,
         allowNull: false,
         validate: {
             isNumeric: true,
@@ -51,15 +55,23 @@ Customer.init(
             isEmail: true
         }
     },
-    car_rego: {
+    password: {
+        type: DataTypes.STRING,
+        allowNull: false,
+        validate: {
+            len: [6,20],
+        }
+    }
+    /*
+    vehicle_id: {
         type: DataTypes.STRING,
         allowNull: false,
         references: {
             model: 'vehicle',
-            key: 'rego',
+            key: 'id',
             unique: true
         }
-    }
+    }*/
   },
   {
     sequelize,

@@ -1,0 +1,14 @@
+[
+    {
+        "name": "Oil Change",
+        "price": 150.00
+    },
+    {
+        "name": "Registration Check",
+        "price": 225.00
+    },
+    {
+        "name": "Spark Plug Replacement",
+        "price": 370.00
+    }
+]
