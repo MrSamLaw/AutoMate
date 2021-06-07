@@ -1,89 +1,52 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../public/style.css">
-    <title>Customer Registration</title>
-</head>
-<body>
-    <div>
-        <nav class="navbar navbar-expand-lg navbar-light" id="navbar">
-            <a class="navbar-brand" href="#">AutoM8</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav">
-                <a class="nav-link active" href="#">Home</a>
-                <a class="nav-link" href="#">Login</a>
-                <a class="nav-link" href="#">Registration<span class="sr-only">(current)</span></a>
-                <a class="nav-link" href="#">Staff</a>
-                </div>
-            </div>
-        </nav>
-        
-        <div class="jumbotron jumbotron-fluid">
-            <div class="container">
-                <h1 class="display-4">AutoM8</h1>
-                
-            </div>     
+<form class="container">
+    <h3>Customer Details:</h3>
+    <div class="form-row name">
+        <div class="col-md-5 firstName">
+            <input type="text" class="form-control" placeholder="First name">
         </div>
-     
-        
-        <form class="container">
-            <h3>Customer Details:</h3>
-            <div class="form-row name">
-                <div class="col-md-5 firstName">
-                    <input type="text" class="form-control" placeholder="First name">
-                </div>
-                <div class="col-md-5 lastName">
-                    <input type="text" class="form-control" placeholder="Last name">
-                </div> 
-            </div> 
-            <br>
-            <div class="form-group col-md-10">
-                <input type="text" class="form-control" id="phoneNumber" name="phone" placeholder="Contact Number">
-            </div>
-            <br>
-            <div class="form-group col-md-10">
-                <input type="email" class="form-control" id="email" name="email" placeholder="Contact Email">
-            </div>
-            <br>
-            <h3>Car Information:</h3>
-            <!-- make -->
-            <div class="form-group col-md-10">
-                <input type="text" class="form-control" id="carMake" name="carMake" placeholder="Make">
-            </div>
-            <br>
-            <!-- model -->
-            <div class="form-group col-md-10">
-                <input type="text" class="form-control" id="carModel" name="carModel" placeholder="Model">
-            </div>
-            <br>
-            <!-- year -->
-            <div class="form-group col-md-10">
-                <input type="text" class="form-control" id="carYear" name="carYear" placeholder="Year">
-            </div>
-            <br>
-            <!-- km's -->
-            <div class="form-group col-md-10">
-                <input type="text" class="form-control" id="carKMs" name="carKMs" placeholder="Kilometres">
-            </div>
-            <br>
-            <!-- rego -->
-            <div class="form-group col-md-10">
-                <input type="text" class="form-control" id="carRego" name="carRego" placeholder="Registration Number">
-            </div>
-            <br>
-            <div class="button">
-                <input class="submit" type="submit" value="Submit">
-            </div>  
-            
-        </form>
-        
+        <div class="col-md-5 lastName">
+            <input type="text" class="form-control" placeholder="Last name">
+        </div> 
+    </div> 
+    <br>
+    <div class="form-group col-md-10">
+        <input type="text" class="form-control" id="phoneNumber" name="phone" placeholder="Contact Number">
     </div>
-</body>
-</html>
+    <br>
+    <div class="form-group col-md-10">
+        <input type="email" class="form-control" id="email" name="email" placeholder="Contact Email">
+    </div>
+    <br>
+    <h3>Car Information:</h3>
+    <!-- make -->
+    <div class="form-group col-md-10">
+        <input type="text" class="form-control" id="carMake" name="carMake" placeholder="Make">
+    </div>
+    <br>
+    <!-- model -->
+    <div class="form-group col-md-10">
+        <input type="text" class="form-control" id="carModel" name="carModel" placeholder="Model">
+    </div>
+    <br>
+    <!-- year -->
+    <div class="form-group col-md-10">
+        <input type="text" class="form-control" id="carYear" name="carYear" placeholder="Year">
+    </div>
+    <br>
+    <!-- km's -->
+    <div class="form-group col-md-10">
+        <input type="text" class="form-control" id="carKMs" name="carKMs" placeholder="Kilometres">
+    </div>
+    <br>
+    <!-- rego -->
+    <div class="form-group col-md-10">
+        <input type="text" class="form-control" id="carRego" name="carRego" placeholder="Registration Number">
+    </div>
+    <br>
+    <div class="button">
+        <input class="submit" type="submit" value="Submit">
+    </div>  
+    
+</form>
+        
+ 
