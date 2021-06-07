@@ -25,6 +25,10 @@ Vehicle.init(
         type: DataTypes.STRING,
         allowNull: false
     },
+    kilometers: {
+      type: DataTypes.INTEGER,
+      allowNull: false
+    },
     /*service_id: {
         type: DataTypes.INTEGER,
         allowNull: false,

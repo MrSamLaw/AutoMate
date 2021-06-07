@@ -1,29 +1,35 @@
 [
     {
-        "name": "Jessica Luff",
+        "first_name": "Jessica",
+        "last_name": "Luff",
         "dob": "1994-11-06",
         "address": "2 Beach St",
         "suburb": "Kingsford",
         "postcode": "2032",
         "phone": "0412123123",
-        "email": "jessluff@email.com"
+        "email": "jessluff@email.com",
+        "password": "ABC123"
     },
     {
-        "name": "Amy Right",
+        "first_name": "Amy",
+        "last_name": "Right",
         "dob": "1956-05-13",
         "address": "6 Highway Ave",
         "suburb": "Bathurst",
         "postcode": "2065",
         "phone": "0412123456",
-        "email": "amyright@email.com"
+        "email": "amyright@email.com",
+        "password": "ABC123"
     },
     {
-        "name": "Tom Smith",
+        "first_name": "Tom",
+        "last_name": "Smith",
         "dob": "2001-01-26",
         "address": "9 Tree St",
         "suburb": "Narara",
         "postcode": "2250",
         "phone": "0412987123",
-        "email": "tomsmith@email.com"
+        "email": "tomsmith@email.com",
+        "password": "ABC123"
     }
 ]
