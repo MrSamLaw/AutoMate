@@ -1,8 +1,31 @@
+<div class="menu-container">
+  <div class="card-header col-md-12 text-center">
+    <h2>
+      Client List
+    </h2>
+  </div>
+
+    {{#each clients as |client|}}
+  <div class="client col-md-4">
+    <p>
+      {{client.id}}.
+      {{client.client_name}}
+    </p>
+  </div>
+  <div class="col-md-5">
+    <p>
+      Description:
+      {{client.description}}
+    </p>
+  </div>
+  {{/each}}
+
     <!-- This is the form for adding a new client -->
   <div class="add-client-container">
     <h1>Search for a client</h1>
     <input placeholder="search for client by name"></input>
   <button>search</button>
+
 
     <br>
     <h2>
@@ -14,29 +37,49 @@
         Client Name:
       </label>
       <br />
-      <textarea id="client_name" name="client_name" rows="2" cols="30"></textarea>
+      <textarea id="client_name" name="client_name" rows="2" cols="30">
+      {{client_name}}
+    </textarea>
       <br />
+
+
+      <label for="description">
+        Description:
+      </label>
+      <br />
+      <textarea id="description" name="description" rows="5" cols="30">
+      {{description}}
+    </textarea>
+      <br />
+
 
       <label for="address">
         Address:
       </label>
       <br />
-      <textarea id="address" name="address" rows="2" cols="30"></textarea>
+      <textarea id="address" name="address" rows="2" cols="30">
+      {{address}}
+    </textarea>
       <br />
       <br />
+
 
       <label for="phone">
         Phone:
       </label>
       <br />
-      <textarea id="phone" name="phone" rows="2" cols="30"></textarea>
+      <textarea id="phone" name="phone" rows="2" cols="30">
+      {{phone}}
+    </textarea>
       <br />
 
       <label for="dob">
         DOB:
       </label>
       <br />
-      <input type="text" id="dob" name="dob" rows="2" cols="30"></input>
+      <input type="text" id="dob" name="dob" rows="2" cols="30">
+      {{dob}}
+    </input>
       <br />
 
 
@@ -47,4 +90,4 @@
   </div>
 </div>
 
-<script src="/public/add-client.js"></script>
+<script src="/js/add-client.js"></script>
