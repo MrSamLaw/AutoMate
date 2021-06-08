@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../public/style.css">
+    <link rel="stylesheet" href="/css/style.css">
     <title>AutoM8</title>
 </head>
 <body>
@@ -17,15 +18,15 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav">
-            <a class="nav-link active" href="../homepage.handlebars">Home</a>
+            <a class="nav-link active" href="/homepage">Home</a>
             <!-- <a class="nav-link" href="#">Login</a> -->
             {{#if logged_in}}
-            <a href="../dashboard.handlebars">Dashboard</a> |
+            <a href="/dashboard">Dashboard</a> |
             <button class="no-button" id="logout">logout</button>
             {{else}}
-            <a href="../login.handlebars">Login</a>
+            <a href="/login">Login</a>
             {{/if}}
-            <a class="nav-link" href="../registration.handlebars">Registration</a>
+            <a class="nav-link" href="/registration">Registration</a>
           </div>
         </div>
     </nav>
@@ -42,3 +43,5 @@
         
 </body>
 </html>
+
+

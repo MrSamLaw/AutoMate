@@ -1,11 +1,11 @@
-<form class="container">
+<form class="container new-client-form">
     <h3>Customer Details:</h3>
     <div class="form-row name">
-        <div class="col-md-5 firstName">
-            <input type="text" class="form-control" placeholder="First name">
+        <div class="col-md-5">
+            <input type="text" class="form-control" id="firstName" placeholder="First name">
         </div>
-        <div class="col-md-5 lastName">
-            <input type="text" class="form-control" placeholder="Last name">
+        <div class="col-md-5">
+            <input type="text" class="form-control" id="lastName" placeholder="Last name">
         </div> 
     </div> 
     <br>
@@ -17,6 +17,29 @@
         <input type="email" class="form-control" id="email" name="email" placeholder="Contact Email">
     </div>
     <br>
+    {{!-- DOB --}}
+    <div class="form-group col-md-10">
+        <input type="text" class="form-control" id="DoB" name="DoB" placeholder="Date of Birth">
+    </div>
+    <br>
+    {{!-- Street Address --}}
+    <div class="form-group col-md-10">
+        <input type="text" class="form-control" id="address" name="Address" placeholder="Street Address">
+    </div>
+    <br>
+    {{!-- Suburb & Postcode --}}
+    <div class="form-row name">
+        <div class="col-md-5">
+            <input type="text" class="form-control" id="suburb" placeholder="Suburb">
+        </div>
+        <div class="col-md-5">
+            <input type="text" class="form-control" id="postcode" placeholder="Postcode">
+        </div> 
+    </div> 
+
+
+
+
     <h3>Car Information:</h3>
     <!-- make -->
     <div class="form-group col-md-10">
@@ -46,7 +69,8 @@
     <div class="button">
         <input class="submit" type="submit" value="Submit">
     </div>  
-    
 </form>
+
+<script src="/js/registration.js"></script>
         
  
