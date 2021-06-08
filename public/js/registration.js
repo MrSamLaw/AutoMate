@@ -18,7 +18,7 @@ async function newFormHandler(event) {
     const year = document.querySelector('#carYear').value;
     const kms = document.querySelector('#carKMs').value;
 
-    console.log(client_name, description, address, phone, dob);
+    console.log(first_name, last_name, phone);
 
     const customerResponse = await fetch(`/api/customer`, {
       method: 'POST',
