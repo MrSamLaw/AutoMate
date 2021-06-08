@@ -40,10 +40,10 @@ Job.init(
           unique: false
         }
     },
-    user_id: {
+    staff_id: {
         type: DataTypes.INTEGER,
         references: {
-          model: 'user',
+          model: 'staff',
           key: 'id',
           unique: false
         }
