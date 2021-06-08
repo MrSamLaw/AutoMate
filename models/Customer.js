@@ -55,13 +55,14 @@ Customer.init(
             isEmail: true
         }
     },
+    /*
     password: {
         type: DataTypes.STRING,
         allowNull: false,
         validate: {
             len: [6,20],
         }
-    }
+    } */
     /*
     vehicle_id: {
         type: DataTypes.STRING,
