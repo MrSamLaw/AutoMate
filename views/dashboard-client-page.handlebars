@@ -1,0 +1,96 @@
+<div class="client-container">
+  <div class="card-header col-md-12 text-center">
+    <h2>
+      Client 
+    </h2>
+  </div>
+
+    {{#each clients as |client|}}
+  <div class="client col-md-4">
+    <p>
+      {{client.id}}.
+      {{client.client_name}}
+    </p>
+  </div>
+  <div class="col-md-5">
+    <p>
+      Description:
+      {{client.description}}
+    </p>
+  </div>
+  {{/each}}
+
+  <div>
+    <h2>
+      Client Details
+    </h2>
+
+      <br />
+      <textarea id="client_name" name="client_name" rows="2" cols="30">
+      {{client_name}}
+      </textarea>
+      <br/>
+
+      <br />
+      <textarea id="description" name="description" rows="5" cols="30">
+      {{description}}
+     </textarea>
+      <br/>
+
+      <br />
+      <textarea id="address" name="address" rows="2" cols="30">
+      {{address}}
+      </textarea>
+      <br/>
+      <br/>
+
+      <br/>
+      <textarea id="phone" name="phone" rows="2" cols="30">
+      {{phone}}
+      </textarea>
+      <br/>
+
+      <br/>
+      <input type="text" id="dob" name="dob" rows="2" cols="30">
+      {{dob}}
+      </input>
+      <br/>
+
+      <br/>
+      <textarea id="rego" name="rego" rows="2" cols="30">
+      {{rego}}
+      </textarea>
+      <br/>
+
+      <br />
+      <textarea id="make" name="make" rows="2" cols="30">
+      {{make}}
+      </textarea>
+      <br/>
+
+      <br />
+      <textarea id="model" name="model" rows="2" cols="30">
+      {{model}}
+      </textarea>
+      <br/>
+
+      <label for="service">
+        Service Details:
+      </label>
+      <br/>
+      <textarea id="service" name="service" rows="2" cols="30">
+      {{service}}
+      </textarea>
+      <br/>
+
+      <label for="Notes">
+        Notes:
+      </label>
+      <br/>
+      <textarea id="notes" name="notes" rows="2" cols="30">
+      {{notes}}
+      </textarea>
+      <br/>
+  </div>
+</div>
+
