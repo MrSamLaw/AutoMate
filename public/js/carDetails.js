@@ -1,4 +1,4 @@
-    const rego = document.querySelector('#carRSego').value;
+    const rego = document.querySelector('#carRego').value;
     const make = document.querySelector('#carMake').value;
     const model = document.querySelector('#carModel').value;
     const year = document.querySelector('#carYear').value;
