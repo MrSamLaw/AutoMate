@@ -4,16 +4,16 @@ async function newFormHandler(event) {
     console.log("got hereeeee");
     event.preventDefault();
 
-    const email = document.querySelector('#email').value;
+    const email = document.querySelector('#username').value;
     const password = document.querySelector('#inputPassword').value;
     
 
-    console.log(client_name, description, address, phone, dob);
+    console.log(username);
 
     const Response = await fetch(`/api/login`, {
       method: 'POST',
       body: JSON.stringify({
-        email,
+        username,
         password
     }),
       headers: {
