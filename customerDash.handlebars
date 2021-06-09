@@ -1,0 +1,34 @@
+<div class="header">
+    <h1>Customer Dashboard</h1>
+    <div>
+        <a href="/addCarDetails">Add Car Details</a>
+    </div>
+</div>
+
+<main>
+    {{#if car_details.length}}
+    <section>
+        <h3>Car Details</h3>
+        {{#each car_details as |details| }} 
+        <div >
+        <div class="row mb-2">
+            <div class="col-md-8">
+                <h4>
+                    {{ vehicle.make }} {{ vehicle.model }} 
+                </h4>
+                <ul>
+                    <li>{{ vehicle.year }}</li>
+                    <li>{{ vehicle.kilometres }}</li>
+                    <li>{{ vehicle.rego }}</li>
+                </ul>
+            </div>
+            {{/each}}
+        </div>
+        {{/if}}
+    </section>
+
+    <section>
+        <h3>Service Notes</h3>
+    {{!-- {{{ service_notes }}} --}}
+    </section>
+</main>
