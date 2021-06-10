@@ -2,7 +2,8 @@
     {
         "date": "2021-03-01",
         "k_travelled": 5000,
-        "vehicle_id": 1
+        "vehicle_id": 1,
+        "note": "Replacement tyres were recommended to the customer."
     },
     {
         "date": "2021-06-07",
