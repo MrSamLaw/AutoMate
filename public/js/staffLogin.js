@@ -4,7 +4,7 @@ async function newFormHandler(event) {
     console.log("got hereeeee");
     event.preventDefault();
 
-    const email = document.querySelector('#username').value;
+    const username = document.querySelector('#username').value;
     const password = document.querySelector('#inputPassword').value;
     
 
