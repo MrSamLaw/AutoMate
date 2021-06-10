@@ -12,11 +12,9 @@ async function newFormHandler(event) {
     const address = document.querySelector('#address').value;
     const suburb = document.querySelector('#suburb').value;
     const postcode = document.querySelector('#postcode').value;
-    const rego = document.querySelector('#carRSego').value;
-    const make = document.querySelector('#carMake').value;
-    const model = document.querySelector('#carModel').value;
-    const year = document.querySelector('#carYear').value;
-    const kms = document.querySelector('#carKMs').value;
+    const password = document.querySelector('#inputPassword').value;
+    const password2 = document.querySelector('#inputPassword2')
+    
 
     console.log(first_name, last_name, phone);
 
@@ -30,25 +28,13 @@ async function newFormHandler(event) {
         dob, 
         address,
         suburb,
-        postcode
+        postcode,
+        password,
+        password2
     }),
       headers: {
         'Content-Type': 'application/json',
       },
-    });
-
-    const vehicleResponse = await fetch('/api/vehicle', {
-        method: 'POST',
-        body: JSON.stringify({
-            rego,
-        make,
-        model,
-        year,
-        kms
-    }),
-        headers: {
-         'Content-Type': 'application/json'
-        }
     });
 
     if (response.ok) {
