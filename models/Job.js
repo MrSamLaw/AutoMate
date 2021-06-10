@@ -24,6 +24,9 @@ Job.init(
         type: DataTypes.INTEGER,
         allowNull: false,
     },
+    note: {
+      type: DataTypes.STRING,
+    },
     vehicle_id: {
         type: DataTypes.INTEGER,
         references: {
