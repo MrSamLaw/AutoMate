@@ -35,14 +35,17 @@
     </section>
     
 
-    <section>
+    <section class="card text-center">
         {{#if job.length }}
-        <h3>Service Notes</h3>
-        {{#each job as |job| }}
-        <p>
-            {{ job.note }}
-        </p>
-        {{/each}}
+        <h3 class="card-header">Service Notes</h3>
+            {{#each job as |job| }}
+        <div class="card-body">
+            <h4>{{ job.date }}</h4>
+            <p>
+                {{ job.note }}
+            </p>
+            {{/each}}
+        </div>   
         {{/if}}
     </section>
 </main>
