@@ -16,7 +16,7 @@ router.post('/', async (req, res) => {
   }
 });
 
-router.post('/stafflogin', async (req, res) => {
+router.post('/staffLogin', async (req, res) => {
   try {
     const staffData = await Staff.findOne({ where: { username: req.body.email } });
 
@@ -58,7 +58,7 @@ router.get('staff/:id', async (req, res) => {
 
     const staff = staffData.get({plain: true});
 
-    res.render('staffdash', {
+    res.render('staffDash', {
       ...staff,
       logged_in: req.session.logged_in,
       staff: req.session.staff
