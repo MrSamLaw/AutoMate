@@ -1,43 +1,53 @@
-<div class="job-container">
-  <div class="card-header col-md-12 text-center">
-    <h2>
-      Dashboard Homepage 
-    </h2>
-  </div>
+<link rel="stylesheet" href="../public/css/home-dashboard-style.css">
 
-  <div>
-    <h2>
-      Today's Schedule
-    </h2>
+<div id="mySidenav" class="sidenav">
+    <a href="#">Home</a>
+    <a href="#">Customer Registration</a>
+    <h4>Search </h4>
+    <input placeholder="search client by name"></input>
+    <button>search</button>
+</div> 
 
-      <label for="todo">
+<div id="main" class="main"> 
+  <div class="job-container">
+  <div class="card-header col-md-20 text-center">
+    <h2>
+    Dashboard Homepage 
+    </h2>
+  </div30
+  <div class="row">
+      <h6>
+       Today's Schedule
+      </h6>
+    <div class="column">
+        <h5 for="todo">
         To Do 
-      </label>
-      <br />
-      <textarea id="todo" name="todo" rows="2" cols="30">
-      {{todo}}
-      </textarea>
-      <br/>
+        </h5>
+        <br />
+        <textarea id="todo" name="todo" rows="34" cols="50"></textarea>
+        <br/>
+    </div>
+        
+    <div class="column">
+        <h5 for="incoming">
+            Incoming Cars:
+        </h5>
+        <br />
+        <textarea id="incoming" name="incoming" rows="15" cols="50">
+        {{incoming}}
+        </textarea>
+        <br/>
 
-      <label for="incoming">
-        Incoming Cars:
-      </label>
-      <br />
-      <textarea id="incoming" name="incoming" rows="5" cols="30">
-      {{incoming}}
-     </textarea>
-      <br/>
-
-      <label for="completed">
-        Completed Cars:
-      </label>
-      <br />
-      <textarea id="completed" name="completed" rows="2" cols="30">
-      {{completed}}
-      </textarea>
-      <br/>
-      <br/>
-
+        <h5 for="completed">
+            Completed Cars:
+        </h5>
+        <br />
+        <textarea id="completed" name="completed" rows="15" cols="50">
+        {{completed}}
+        </textarea>
+        <br/>
+        <br/>
+    </div>
   </div>
 </div>
 

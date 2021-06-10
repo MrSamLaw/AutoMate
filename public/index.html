@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../public/css/client-page-style.css">
+
+<div id="mySidenav" class="sidenav">
+    <a href="#">Home</a>
+    <a href="#">Customer Registration</a>
+    <h4>Search </h4>
+    <input placeholder="search client by name"></input>
+    <button>search</button>
+</div> 
+
+<div id="main" class="main"> 
+    <div class="client-container">
+        <div class="card-header col-md-12 text-center">
+          <h2>
+            {{client.id}}.
+            {{client.client_name}} 
+          </h2>
+        </div>
+          {{#each clients as |client|}}
+        </div>
+        {{/each}}
+      
+    <div class="client-container">
+        <h2> Customer Details </h2>
+        <br />
+        <textarea id="client_name" name="client_name" rows="2" cols="30">
+        {{client_name}}
+        </textarea>
+        <br/>
+    
+        <br />
+        <textarea id="description" name="description" rows="5" cols="30">
+        {{description}}
+        </textarea>
+        <br/>
+    
+        <br />
+        <textarea id="address" name="address" rows="2" cols="30">
+        {{address}}
+        </textarea>
+        <br/>
+        <br/>
+    
+        <br/>
+        <textarea id="phone" name="phone" rows="2" cols="30">
+        {{phone}}
+        </textarea>
+        <br/>
+    
+        <br/>
+        <input type="text" id="dob" name="dob" rows="2" cols="30">
+        {{dob}}
+        </input>
+        <br/>
+
+        <h2>Car Details:</h2>
+        <br/>
+        <textarea id="rego" name="rego" rows="2" cols="30">
+        {{rego}}
+        </textarea>
+        <br/>
+    
+        <br />
+        <textarea id="make" name="make" rows="2" cols="30">
+        {{make}}
+        </textarea>
+        <br/>
+    
+        <br />
+        <textarea id="model" name="model" rows="2" cols="30">
+        {{model}}
+        </textarea>
+        <br/>
+    
+        <h2 for="service"> Service Details: </h2>
+        </label>
+        <br/>
+        <textarea id="service" name="service" rows="2" cols="30">
+        {{service}}
+        </textarea>
+        <br/>
+    
+        <h2 for="Notes"> Notes:</h2>
+        <br/>
+        <textarea id="notes" name="notes" rows="2" cols="30">
+        {{notes}}
+        </textarea>
+        <br/>
+    </div>
+    </div>
+      
+      
+</div>

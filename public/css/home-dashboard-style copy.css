@@ -1,0 +1,122 @@
+#navbar {
+  justify-content: end;
+  background-color: #1E2633;
+}
+
+.nav-link {
+  color: #f8d9b2;
+}
+
+.jumbotron {
+  background-color: #52B6D6;
+}
+
+.column {
+  float: left;
+  width: 50%;
+}
+
+.job-container {
+    padding-bottom: px;
+} 
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.sidenav {
+  height: 100%;
+  width: 250px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #1E2633;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.sidenav a {
+  padding: 6px 6px 6px 32px;
+  text-decoration: none;
+  font-size: 18px;
+  color: #818181;
+  display: block;
+}
+  
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+  
+  /* Page content */
+.main {
+  margin-left: 250px; 
+}
+
+h1 {
+  color: #CA0000;
+}
+
+h2 {
+  color: #1E2633;
+  padding-top: 20px;
+  padding-bottom: 15px; 
+}
+
+h3 {
+  color: #CA0000;
+}
+
+h4 {
+  font-size: 18px;
+  color:#1E2633;
+  margin-left: 30px;
+}
+
+h5 {
+  color: #1E2633;
+  font-size: 25px;
+  padding-top: 20px;
+}
+
+h6 {
+    color: #1E2633;
+    font-size: 20px;
+    padding-bottom: 10px; 
+}
+input {
+  margin-left: 30px;
+}
+
+button {
+  margin-left: 30px; 
+}
+.aboutUs {
+  text-align: center;
+}
+
+.aboutText {
+  text-align: center;
+}
+
+.button {
+  display: flex;
+}
+
+.submit {
+  justify-content: center;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+      width: 100%;
+    }
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+    }
+  }

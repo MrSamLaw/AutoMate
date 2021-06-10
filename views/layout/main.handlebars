@@ -20,10 +20,12 @@
             <a class="nav-link active" href="../homepage.handlebars">Home</a>
             <!-- <a class="nav-link" href="#">Login</a> -->
             {{#if logged_in}}
-            <a href="../dashboard.handlebars">Dashboard</a> |
+            <a href="../dashboard-home-jobpage">Dashboard</a> |
             <button class="no-button" id="logout">logout</button>
             {{else}}
             <a href="../login.handlebars">Login</a>
+            {{else}}
+            <a href="../dashboard-client-page.handlebars">Login</a>
             {{/if}}
             <a class="nav-link" href="../registration.handlebars">Registration</a>
           </div>
