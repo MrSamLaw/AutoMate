@@ -21,17 +21,17 @@
             <a class="nav-link active" href="/">Home</a>
             <!-- <a class="nav-link" href="#">Login</a> -->
             {{#if logged_in}}
-            <a href="/dashboard">Staff Dashboard</a> |
+            <a href="/staffDash">Staff Dashboard</a> |
             <button class="no-button" id="logout">Logout</button>
             {{else}}
-            <a href="/login">Staff Login</a>
+            <a href="/staffLogin">Staff Login</a>
             {{/if}}
             <a class="nav-link" href="/registration">Registration</a>
             {{#if logged_in}}
             <a href="/customerDash">Customer Dashboard</a> |
             <button class="no-button" id="logout">Logout</button>
             {{else}}
-            <a href="/login">Customer Login</a>
+            <a href="/customerLogin">Customer Login</a>
             {{/if}}
           </div>
         </div>
