@@ -14,7 +14,7 @@ router.get('/', async (req, res) => {
 router.get('/staffLogin', (req, res) => {
     // If the user is already logged in, redirect the request to another route
     if (req.session.logged_in) {
-      res.redirect('/dashboard');
+      res.redirect('/staffDash');
       return;
     }
   
@@ -24,7 +24,7 @@ router.get('/staffLogin', (req, res) => {
   router.get('/customerLogin', (req, res) => {
     // If the user is already logged in, redirect the request to another route
     if (req.session.logged_in) {
-      res.redirect('/dashboard');
+      res.redirect('/customerDash');
       return;
     }
   
