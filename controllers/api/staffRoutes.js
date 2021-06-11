@@ -21,7 +21,6 @@ router.post('/login', async (req, res) => {
   try {
     
     const staffData = await Staff.findOne({ where: { username: req.body.username } });
-console.log(staffData);
     if (!staffData) {
       res
         .status(400)
