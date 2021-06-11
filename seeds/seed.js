@@ -11,7 +11,10 @@ const seedDatabase = async () => {
   await sequelize.sync({ force: true });
 
   const staff = await Staff.bulkCreate(staffSeedData);
-  const customers = await Customer.bulkCreate(customerSeedData);
+  const customers = await Customer.bulkCreate(customerSeedData, {
+    individualHooks: true,
+    returning: true,
+  });
   const services = await Service.bulkCreate(serviceSeedData); /*, {
     individualHooks: true,
     returning: true,
