@@ -23,4 +23,4 @@ if(email && password) {
 };
   document
     .querySelector('.loginform')
-    .addEventListener('submit', newFormHandler); 
+    .addEventListener('submit', newFormHandler); x
