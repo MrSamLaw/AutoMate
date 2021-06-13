@@ -29,6 +29,7 @@ router.post('/login', async (req, res) => {
       const validPassword = await custData.checkPassword(req.body.password);
   
       if (!validPassword) {
+
         res.status(400).json({ message: 'Incorrect username/password, please try again' });
         return;
       }
@@ -42,6 +43,7 @@ router.post('/login', async (req, res) => {
       });
   
     } catch (err) {
+
         console.log(err);
       res.status(400).json(err);
     }

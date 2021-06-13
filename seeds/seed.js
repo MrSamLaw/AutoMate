@@ -14,7 +14,10 @@ const seedDatabase = async () => {
     individualHooks: true,
     returning: true,
   });
-  const customers = await Customer.bulkCreate(customerSeedData);
+  const customers = await Customer.bulkCreate(customerSeedData, {
+    individualHooks: true,
+    returning: true,
+  });
   const services = await Service.bulkCreate(serviceSeedData); /*, {
     individualHooks: true,
     returning: true,

@@ -5,8 +5,7 @@ async function newFormHandler(event) {
 
   const email = document.querySelector('#email').value;
   const password = document.querySelector('#inputPassword').value;
-  console.log(email);
-  console.log(password);
+
 if(email && password) {
   const response = await fetch('/api/customer/login', {
     method: 'POST',
