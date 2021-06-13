@@ -26,12 +26,19 @@
               {{else}}
                 <a class="nav-link" href="/customerDash">Customer Dashboard</a> |
               {{/if}}
-            <a class="nav-link" id="logout">Logout</a>
+            <button class="nav-link" id="logout">Logout</button>
             {{else}}
               <a class="nav-link" href="/staffLogin">Staff Login</a> | 
               <a class="nav-link" href="/customerLogin">Customer Login</a> | 
               <a class="nav-link" href="/registration">Registration</a>
             {{/if}}
+            {{!-- <a class="nav-link" href="/registration">Registration</a>
+            {{#if logged_in}}
+            
+            <button class="no-button" id="logout">Logout</button>
+            {{else}}
+            
+            {{/if}} --}}
           </div>
         </div>
     </nav>
@@ -46,7 +53,7 @@
       {{{ body }}}
     </main>
         
-         <!-- Render script for logged in users only -->
+  <!-- Render script for logged in users only -->
   {{#if logged_in}}
   <script src="/js/logout.js"></script>
   {{/if}}

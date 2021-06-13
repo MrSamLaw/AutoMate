@@ -1,29 +1,30 @@
 const router = require('express').Router();
 const { Staff } = require('../../models');
 
-router.post('/', async (req, res) => {
+// router.post('/', async (req, res) => {
+//   try {
+//     const staffData = await Staff.create(req.body);
+
+//     req.session.save(() => {
+//       req.session.staff_id = staffData.id;
+//       req.session.logged_in = true;
+
+//       res.status(200).json(staffData);
+//     });
+//   } catch (err) {
+//     res.status(400).json(err);
+//   }
+// });
+
+router.post('/login', async (req, res) => {
+
   try {
-    const staffData = await Staff.create(req.body);
-
-    req.session.save(() => {
-      req.session.staff_id = staffData.id;
-      req.session.logged_in = true;
-
-      res.status(200).json(staffData);
-    });
-  } catch (err) {
-    res.status(400).json(err);
-  }
-});
-
-router.post('/staffLogin', async (req, res) => {
-  try {
-    const staffData = await Staff.findOne({ where: { username: req.body.email } });
-
+    
+    const staffData = await Staff.findOne({ where: { username: req.body.username } });
     if (!staffData) {
       res
         .status(400)
-        .json({ message: 'Incorrect username or password, please try again' });
+        .json({ message: 'Incorrect username/password, please try again' });
       return;
     }
 
@@ -32,7 +33,7 @@ router.post('/staffLogin', async (req, res) => {
     if (!validPassword) {
       res
         .status(400)
-        .json({ message: 'Incorrect username or password, please try again' });
+        .json({ message: 'Incorrect username/password, please try again' });
       return;
     }
 
@@ -45,11 +46,12 @@ router.post('/staffLogin', async (req, res) => {
     });
 
   } catch (err) {
+    console.log(err);
     res.status(400).json(err);
   }
 });
 
-router.get('staff/:id', async (req, res) => {
+router.get('/staff/:id', async (req, res) => {
   try {
     const staffData = await Staff.findByPk(req.params.id, {
       attributes: [],

@@ -66,7 +66,7 @@ Customer.init(
         validate: {
             len: [6,20],
         }
-    }
+    } 
     /*
     vehicle_id: {
         type: DataTypes.STRING,
