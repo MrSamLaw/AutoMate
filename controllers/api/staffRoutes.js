@@ -54,9 +54,7 @@ router.post('/login', async (req, res) => {
 
 router.get('/:id', withAuth, async (req, res) => {
   try {
-    console.log(req.params.id);
     const staffData = await Staff.findByPk(req.params.id);
-console.log(staffData);
     const staff = staffData.get({plain: true});
 
     res.render('staffDash', {
