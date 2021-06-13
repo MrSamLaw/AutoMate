@@ -43,7 +43,7 @@ router.post('/login', async (req, res) => {
       req.session.logged_in = true;
       req.session.staff = true;
       
-      res.json({ staff: staffData, message: 'You are now logged in!' });
+      res.json({ staff: staffData, staff_id: staffData.id, message: 'You are now logged in!' });
     });
 
   } catch (err) {

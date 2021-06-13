@@ -6,9 +6,6 @@ async function newFormHandler(event) {
     const username = document.querySelector('#username').value;
     const password = document.querySelector('#inputPassword').value;
     
-
-    console.log(username);
-    console.log(password);
 if(username && password) {
     const response = await fetch(`/api/staff/login`, {
       method: 'POST',
@@ -17,7 +14,7 @@ if(username && password) {
     });
 
     if (response.ok) {
-      document.location.replace('/');
+      document.location.replace(`/`);
     } else {
       alert('Failed to log in.');
     }
