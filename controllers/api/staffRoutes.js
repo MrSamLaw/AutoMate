@@ -1,5 +1,6 @@
 const router = require('express').Router();
-const { Staff } = require('../../models');
+const { Staff, Job } = require('../../models');
+const withAuth = require('../../utils/auth');
 
 // router.post('/', async (req, res) => {
 //   try {
@@ -51,13 +52,11 @@ router.post('/login', async (req, res) => {
   }
 });
 
-router.get('/staff/:id', async (req, res) => {
+router.get('/:id', withAuth, async (req, res) => {
   try {
-    const staffData = await Staff.findByPk(req.params.id, {
-      attributes: [],
-      include: [{},],
-    });
-
+    console.log(req.params.id);
+    const staffData = await Staff.findByPk(req.params.id);
+console.log(staffData);
     const staff = staffData.get({plain: true});
 
     res.render('staffDash', {
@@ -66,6 +65,7 @@ router.get('/staff/:id', async (req, res) => {
       staff: req.session.staff
     });
   } catch(err) {
+    
     res.status(500).json(err);
   }
 });
