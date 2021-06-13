@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const {Customer} = require('../../models');
+const {Customer, Vehicle} = require('../../models');
 const withAuth = require('../../utils/auth');
 
 router.post('/', withAuth, async (req, res) => {
@@ -49,9 +49,18 @@ router.post('/login', async (req, res) => {
 
 router.get('/:id', withAuth, async (req, res) => {
     try {
-      const custData = await Customer.findByPk(req.params.id);
+      const custData = await Customer.findByPk(req.params.id, 
+        {
+         include: [
+            {
+                model: Vehicle,
+                attributes: ['rego', 'make', 'model', 'kilometers', 'customer_id'],
+                where: {customer_id: req.params.id},
+            },
+         ],
+        });
       const customer = custData.get({plain: true});
-  
+  console.log(customer);
       res.render('custDash', {
         ...customer,
         logged_in: req.session.logged_in,
