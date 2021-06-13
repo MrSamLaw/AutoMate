@@ -6,6 +6,6 @@ const customerRoutes = require('./customerRoutes');
 
 router.use('/vehicles', vehicleRoutes);
 router.use('/staff', staffRoutes);
-router.use('/customers', customerRoutes);
+router.use('/customer', customerRoutes);
 
 module.exports = router;
