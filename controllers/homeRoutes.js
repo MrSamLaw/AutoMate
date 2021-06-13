@@ -5,7 +5,7 @@ const { Staff, Customer } = require('../models');
 router.get('/', async (req, res) => {
     try {
       // Pass serialized data and session flag into template
-      res.render('homepage', { logged_in: req.session.logged_in, staff: req.session.staff});
+      res.render('homepage', { logged_in: req.session.logged_in, staff: req.session.staff, id: req.session.staff_id || req.session.cust_id});
     } catch (err) {
       res.status(500).json(err);
     }

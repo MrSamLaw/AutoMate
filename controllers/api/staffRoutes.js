@@ -1,5 +1,6 @@
 const router = require('express').Router();
-const { Staff } = require('../../models');
+const { Staff, Job } = require('../../models');
+const withAuth = require('../../utils/auth');
 
 // router.post('/', async (req, res) => {
 //   try {
@@ -42,7 +43,7 @@ router.post('/login', async (req, res) => {
       req.session.logged_in = true;
       req.session.staff = true;
       
-      res.json({ staff: staffData, message: 'You are now logged in!' });
+      res.json({ staff: staffData, staff_id: staffData.id, message: 'You are now logged in!' });
     });
 
   } catch (err) {
@@ -51,13 +52,9 @@ router.post('/login', async (req, res) => {
   }
 });
 
-router.get('/staff/:id', async (req, res) => {
+router.get('/:id', withAuth, async (req, res) => {
   try {
-    const staffData = await Staff.findByPk(req.params.id, {
-      attributes: [],
-      include: [{},],
-    });
-
+    const staffData = await Staff.findByPk(req.params.id);
     const staff = staffData.get({plain: true});
 
     res.render('staffDash', {
@@ -66,6 +63,7 @@ router.get('/staff/:id', async (req, res) => {
       staff: req.session.staff
     });
   } catch(err) {
+    
     res.status(500).json(err);
   }
 });
