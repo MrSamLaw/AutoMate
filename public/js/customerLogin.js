@@ -1,26 +1,18 @@
-const { doc } = require("prettier");
+// const { doc } = require("prettier");
 
 async function newFormHandler(event) {
-    console.log("submit");
     event.preventDefault();
 
     const email = document.querySelector('#email').value;
     const password = document.querySelector('#inputPassword').value;
-    
-
     console.log(email);
-
-    const Response = await fetch(`/api/login`, {
+    console.log(password);
+if(email && password) {
+    const response = await fetch(`/api/customer/login`, {
       method: 'POST',
-      body: JSON.stringify({
-        email,
-        password
-    }),
-      headers: {
-        'Content-Type': 'application/json',
-      },
+      body: JSON.stringify({ email, password }),
+      headers: { 'Content-Type': 'application/json' },
     });
-
 
     if (response.ok) {
       document.location.replace('/');
@@ -28,7 +20,7 @@ async function newFormHandler(event) {
       alert('Failed to log in.');
     }
   }
-
+};
   document
     .querySelector('.loginform')
-    .addEventListener('submit', newFormHandler); 
+    .addEventListener('submit', newFormHandler);
