@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const {Customer} = require('../../models');
+const {Customer, Vehicle} = require('../../models');
 const withAuth = require('../../utils/auth');
 
 router.post('/', withAuth, async (req, res) => {
@@ -16,7 +16,6 @@ router.post('/', withAuth, async (req, res) => {
 });
 
 router.post('/login', async (req, res) => {
-
     try {
       
       const custData = await Customer.findOne({ where: { email: req.body.email } });
@@ -30,9 +29,8 @@ router.post('/login', async (req, res) => {
       const validPassword = await custData.checkPassword(req.body.password);
   
       if (!validPassword) {
-        res
-          .status(400)
-          .json({ message: 'Incorrect username/password, please try again' });
+
+        res.status(400).json({ message: 'Incorrect username/password, please try again' });
         return;
       }
   
@@ -45,9 +43,35 @@ router.post('/login', async (req, res) => {
       });
   
     } catch (err) {
+
+        console.log(err);
       res.status(400).json(err);
     }
   });
-  
+
+router.get('/:id', withAuth, async (req, res) => {
+    try {
+      const custData = await Customer.findByPk(req.params.id, 
+        {
+         include: [
+            {
+                model: Vehicle,
+                attributes: ['rego', 'make', 'model', 'kilometers', 'customer_id'],
+                where: {customer_id: req.params.id},
+            },
+         ],
+        });
+      const customer = custData.get({plain: true});
+
+      res.render('custDash', {
+        ...customer,
+        logged_in: req.session.logged_in,
+        staff: req.session.staff
+      });
+    } catch(err) {
+      
+      res.status(500).json(err);
+    }
+  });  
 
 module.exports = router;

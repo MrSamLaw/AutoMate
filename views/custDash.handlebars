@@ -1,27 +1,26 @@
 <div class="header">
-    <h1>Customer Dashboard</h1>
+    <h1>{{first_name}} {{last_name}}'s Dash</h1>
     
 </div>
 
 <main>
     
     <section class="card text-center">
-        {{#if car_details.length }}
+        {{#if vehicles.length }}
         <div>
             <h3 class="card-header">Car Details</h3> 
         </div>
           
         <div>
             <div class="card-body">
-                {{#each car_details as |details| }}
+                {{#each vehicles as |vehicle| }}
                 <div>
                     <h4 class="card-title">
                         {{ vehicle.make }} {{ vehicle.model }} 
                     </h4>
                     <ul class="card-text">
-                        <li>{{ vehicle.year }}</li>
-                        <li>{{ vehicle.kilometres }}</li>
-                        <li>{{ vehicle.rego }}</li>
+                        <li>Odometer: {{format_amount vehicle.kilometers }} KM</li>
+                        <li>Rego Plate: {{ vehicle.rego }}</li>
                     </ul>
                 </div>
                 {{/each}}
