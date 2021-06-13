@@ -60,7 +60,7 @@ router.get('/:id', withAuth, async (req, res) => {
          ],
         });
       const customer = custData.get({plain: true});
-  console.log(customer);
+
       res.render('custDash', {
         ...customer,
         logged_in: req.session.logged_in,
