@@ -10,8 +10,14 @@ const jobSeedData = require('./jobSeedData.json');
 const seedDatabase = async () => {
   await sequelize.sync({ force: true });
 
-  const staff = await Staff.bulkCreate(staffSeedData);
-  const customers = await Customer.bulkCreate(customerSeedData);
+  const staff = await Staff.bulkCreate(staffSeedData, {
+    individualHooks: true,
+    returning: true,
+  });
+  const customers = await Customer.bulkCreate(customerSeedData, {
+    individualHooks: true,
+    returning: true,
+  });
   const services = await Service.bulkCreate(serviceSeedData); /*, {
     individualHooks: true,
     returning: true,

@@ -4,8 +4,8 @@ const staffRoutes = require('./staffRoutes');
 const customerRoutes = require('./customerRoutes');
 
 
-router.use('/vehicles', vehicleRoutes);
+router.use('/vehicle', vehicleRoutes);
 router.use('/staff', staffRoutes);
-router.use('/customers', customerRoutes);
+router.use('/customer', customerRoutes);
 
 module.exports = router;

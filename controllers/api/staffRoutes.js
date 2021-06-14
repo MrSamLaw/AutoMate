@@ -1,29 +1,31 @@
 const router = require('express').Router();
-const { Staff } = require('../../models');
+const { Staff, Job } = require('../../models');
+const withAuth = require('../../utils/auth');
 
-router.post('/', async (req, res) => {
+// router.post('/', async (req, res) => {
+//   try {
+//     const staffData = await Staff.create(req.body);
+
+//     req.session.save(() => {
+//       req.session.staff_id = staffData.id;
+//       req.session.logged_in = true;
+
+//       res.status(200).json(staffData);
+//     });
+//   } catch (err) {
+//     res.status(400).json(err);
+//   }
+// });
+
+router.post('/login', async (req, res) => {
+
   try {
-    const staffData = await Staff.create(req.body);
-
-    req.session.save(() => {
-      req.session.staff_id = staffData.id;
-      req.session.logged_in = true;
-
-      res.status(200).json(staffData);
-    });
-  } catch (err) {
-    res.status(400).json(err);
-  }
-});
-
-router.post('/staffLogin', async (req, res) => {
-  try {
-    const staffData = await Staff.findOne({ where: { username: req.body.email } });
-
+    
+    const staffData = await Staff.findOne({ where: { username: req.body.username } });
     if (!staffData) {
       res
         .status(400)
-        .json({ message: 'Incorrect username or password, please try again' });
+        .json({ message: 'Incorrect username/password, please try again' });
       return;
     }
 
@@ -32,7 +34,7 @@ router.post('/staffLogin', async (req, res) => {
     if (!validPassword) {
       res
         .status(400)
-        .json({ message: 'Incorrect username or password, please try again' });
+        .json({ message: 'Incorrect username/password, please try again' });
       return;
     }
 
@@ -41,21 +43,18 @@ router.post('/staffLogin', async (req, res) => {
       req.session.logged_in = true;
       req.session.staff = true;
       
-      res.json({ staff: staffData, message: 'You are now logged in!' });
+      res.json({ staff: staffData, staff_id: staffData.id, message: 'You are now logged in!' });
     });
 
   } catch (err) {
+    console.log(err);
     res.status(400).json(err);
   }
 });
 
-router.get('staff/:id', async (req, res) => {
+router.get('/:id', withAuth, async (req, res) => {
   try {
-    const staffData = await Staff.findByPk(req.params.id, {
-      attributes: [],
-      include: [{},],
-    });
-
+    const staffData = await Staff.findByPk(req.params.id);
     const staff = staffData.get({plain: true});
 
     res.render('staffDash', {
@@ -64,6 +63,7 @@ router.get('staff/:id', async (req, res) => {
       staff: req.session.staff
     });
   } catch(err) {
+    
     res.status(500).json(err);
   }
 });
