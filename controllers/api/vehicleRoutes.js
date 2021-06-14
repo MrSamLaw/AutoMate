@@ -1,12 +1,12 @@
 const router = require('express').Router();
-const {Vehicle} = require('../../models');
+const { Vehicle } = require('../../models');
 const withAuth = require('../../utils/auth');
 
 router.post('/', withAuth, async (req, res) => {
     try {
         const newVehicle = await Vehicle.create({
             ...req.body,
-            user_id: req.session.user_id,
+            customer_id: req.session.cust_id,
         });
 
         res.status(200).json(newVehicle);

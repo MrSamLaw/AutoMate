@@ -15,6 +15,14 @@ router.post('/', async (req, res) => {
     }
 });
 
+router.get('/addCarDetails', withAuth, async (req, res) => {
+    try {
+        res.render('addCarDetails');
+    } catch (err) {
+        res.status(400).json(err);
+    }
+});
+
 router.post('/login', async (req, res) => {
     try {
 
