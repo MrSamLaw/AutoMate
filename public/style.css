@@ -31,6 +31,21 @@ h3 {
     text-align: center;
 }
 
+
+
+img{
+    max-block-size: 400px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    border: #1E2633 solid 40px;
+    justify-content: center;
+}
+
+#img-background {
+    margin-top: 40px;
+    background-color: #1E2633;
+}
+
 .button {
     display: flex;
 }
