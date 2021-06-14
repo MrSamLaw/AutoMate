@@ -26,6 +26,7 @@ h3 {
 }
 
 .aboutText {
+    max-width: 60%;
     text-align: center;
 }
 
