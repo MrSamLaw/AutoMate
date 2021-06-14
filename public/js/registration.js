@@ -42,7 +42,7 @@ async function newFormHandler(event) {
       if (customerResponse.ok) {
         document.location.replace('/');
       } else {
-        alert('Failed to add client');
+        alert('Failed to add client response bad');
       }
     } else {
       alert('Passwords must match');
