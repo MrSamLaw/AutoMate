@@ -40,7 +40,7 @@ async function newFormHandler(event) {
       });
 
       if (customerResponse.ok) {
-        document.location.replace('/');
+        document.location.replace('/customerLogin');
       } else {
         alert('Failed to add client response bad');
       }
