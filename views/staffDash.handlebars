@@ -5,11 +5,13 @@
     </h2>
   </div>
 
+<main>
   <div>
     <h2>
       Today's Schedule
     </h2>
 
+    <div>
       <label for="todo">
         To Do 
       </label>
@@ -18,16 +20,26 @@
       {{todo}}
       </textarea>
       <br/>
-
+      <div class="button">
+        <input class="submit" type="submit" value="Submit">
+      </div> 
+    </div>
+      
+    <div>
       <label for="incoming">
         Incoming Cars:
       </label>
       <br />
       <textarea id="incoming" name="incoming" rows="5" cols="30">
       {{incoming}}
-     </textarea>
+      </textarea>
       <br/>
-
+      <div class="button">
+        <input class="submit" type="submit" value="Submit">
+      </div>
+    </div>
+      
+    <div>
       <label for="completed">
         Completed Cars:
       </label>
@@ -36,8 +48,15 @@
       {{completed}}
       </textarea>
       <br/>
+      <div class="button">
+        <input class="submit" type="submit" value="Submit">
+      </div>
       <br/>
+    </div>
+      
 
   </div>
+</main>
+  
 </div>
 
