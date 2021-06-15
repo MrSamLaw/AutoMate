@@ -7,5 +7,7 @@ const customerRoutes = require('./customerRoutes');
 router.use('/vehicle', vehicleRoutes);
 router.use('/staff', staffRoutes);
 router.use('/customer', customerRoutes);
+//router.use('/job', customerRoutes);
+router.use('/jobs', customerRoutes);
 
 module.exports = router;

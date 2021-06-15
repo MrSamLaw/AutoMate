@@ -1,20 +1,20 @@
 [
     {
         "username": "jackp",
-        "password": "User1",
+        "password": "ABC123",
         "first_name": "Jack",
         "last_name": "Percy",
         "isAdmin": 1
     },
     {
         "username": "nancyt",
-        "password": "User2",
+        "password": "ABC123",
         "first_name": "Nancy",
         "last_name": "Treble"
     },
     {
         "username": "samh",
-        "password": "User3",
+        "password": "ABC123",
         "first_name": "Sam",
         "last_name": "Harrison"
     }
