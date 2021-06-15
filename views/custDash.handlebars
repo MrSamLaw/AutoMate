@@ -5,15 +5,14 @@
 
 <main>
     
-    <section class="card text-center">
+    <section class="card text-center col-sm-10 col-md-5 col-lg-5">
         {{#if vehicles.length }}
-        <div>
-            <h3 class="card-header">Car Details</h3> 
+        <div class="card-header">
+            <h3>Car Details</h3>
         </div>
-          
+            {{#each vehicles as |vehicle| }}
         <div>
             <div class="card-body">
-                {{#each vehicles as |vehicle| }}
                 <div>
                     <h4 class="card-title">
                         {{ vehicle.make }} {{ vehicle.model }} 
@@ -23,10 +22,10 @@
                         <li>Rego Plate: {{ vehicle.rego }}</li>
                     </ul>
                 </div>
-                {{/each}}
-            </div>
-        {{/if}}
+            </div>    
+            {{/each}}
         </div>
+        {{/if}}
         
         <div>
             <a href="./addCarDetails" class="btn btn-dark">Add Car Details</a>
@@ -34,13 +33,19 @@
     </section>
     
 
-    <section>
+    <section class="card text-center">
         {{#if job.length }}
-        <h3>Service Notes</h3>
+        <div class="card-header">
+            <h3>Service Notes</h3>
+        </div>
+        
         {{#each job as |job| }}
-        <p>
+        <div>
+            <h4 class="card-title"> {{ job.date }}</h4>
+            <p class="card-text">
             {{ job.note }}
-        </p>
+            </p>
+        </div>
         {{/each}}
         {{/if}}
     </section>
