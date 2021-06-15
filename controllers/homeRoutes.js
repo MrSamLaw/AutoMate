@@ -21,10 +21,10 @@ router.get('/registration', async (req, res) => {
 
 router.get('/staffLogin', (req, res) => {
   // If the user is already logged in, redirect the request to another route
-  // if (req.session.logged_in) {
-  //   res.redirect('/staffDash');
-  //   return;
-  // }
+  if (req.session.logged_in) {
+    res.redirect(`/api/staff/${req.session.staff_id}`);
+    return;
+  }
 
   res.render('staffLogin');
 });
@@ -32,7 +32,7 @@ router.get('/staffLogin', (req, res) => {
 router.get('/customerLogin', (req, res) => {
   // If the user is already logged in, redirect the request to another route
   if (req.session.logged_in) {
-    res.redirect('/customerDash');
+    res.redirect(`/api/customer/${req.session.cust_id}`);
     return;
   }
 

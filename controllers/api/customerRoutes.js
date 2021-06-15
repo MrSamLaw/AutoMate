@@ -65,7 +65,6 @@ router.get('/:id', withAuth, async (req, res) => {
                     {
                         model: Vehicle,
                         attributes: ['rego', 'make', 'model', 'kilometers', 'customer_id'],
-                        where: { customer_id: req.params.id },
                     },
                 ],
             });
