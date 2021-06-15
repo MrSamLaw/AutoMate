@@ -25,7 +25,8 @@ async function newFormHandler(event) {
     });
 
     if (vehicleResponse.ok) {
-      document.location.replace('/');
+      const vehicleRes = await vehicleResponse.json();
+      document.location.replace(`/api/customer/${vehicleRes.customer_id}`);
     } else {
       alert('Failed to add vehicle');
     }
