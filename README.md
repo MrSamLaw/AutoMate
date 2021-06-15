@@ -23,6 +23,16 @@ A CRM for Automotive Workshops
  
    ## Description
   AutoM8 is designed to be a mechanic's webpage where customers can register their details, then have the ability to log in to a customer dashoard and add their car details for future servicing. The dashboard displays notes relating to previous services. AutoM8 also has a staff login and dashboard where we can view the upcoming jobs, write notes, and search for customers.
+
+  ## Screenshots
+  Homepage
+  ![Homepage](/public/assets/ProjectScrnSht1.png)
+
+  Customer Dashboard
+  ![Customer Dashboard](/public/assets/ProjectScrnSht2.png)
+
+  Staff Dashboard 
+  ![Staff Dashboard](/public/assets/ProjectScrnSht3.png)
   
   
   ## Installation
