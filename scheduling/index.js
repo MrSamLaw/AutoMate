@@ -27,7 +27,7 @@ let transporter = nodemailer.createTransport({
     }
 });
 
-cron.schedule('0 30 9 * * *', function() { // 0 0 10 * * 7 this runs 10am every sunday  
+cron.schedule('0 19 17 * * *', function() { // 0 0 10 * * 7 this runs 10am every sunday  
   //second (optional) | minute | hour | day of month | month | day of week  
   console.log('Running Cron job');
   connection.query('SELECT * FROM customer', (err, res) => {
