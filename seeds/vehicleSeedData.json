@@ -3,18 +3,21 @@
         "rego": "ABC123",
         "make": "Suzuki",
         "model": "Swift",
-        "kilometers" : 20000
+        "kilometers" : 20000,
+        "customer_id" : 1
     },
     {
         "rego": "GHJ123",
         "make": "Mazda",
         "model": "3",
-        "kilometers" : 35000
+        "kilometers" : 35000,
+        "customer_id" : 2
     },
     {
         "rego": "A6H893",
         "make": "Ford",
         "model": "Triton",
-        "kilometers" : 23000
+        "kilometers" : 23000,
+        "customer_id" : 3
     }
 ]

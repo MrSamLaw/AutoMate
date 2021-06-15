@@ -28,7 +28,7 @@ const seedDatabase = async () => {
     const newVehicles = await Vehicle.create({
       ...vehicle,
       //service_id: services[Math.floor(Math.random() * services.length)].id,
-      customer_id: customers[Math.floor(Math.random() * customers.length)].id,
+      //customer_id: customers[Math.floor(Math.random() * customers.length)].id,
     });
     i++;
   }
@@ -37,8 +37,8 @@ const seedDatabase = async () => {
     const newJobs = await Job.create({
       ...job,
       //vehicle_id: vehicle[Math.floor(Math.random() * vehicle.length)].id,
-      service_id: services[Math.floor(Math.random() * services.length)].id,
-      staff_id: staff[Math.floor(Math.random() * staff.length)].id,
+      //service_id: services[Math.floor(Math.random() * services.length)].id,
+      //staff_id: staff[Math.floor(Math.random() * staff.length)].id,
     });
   }
   /*
