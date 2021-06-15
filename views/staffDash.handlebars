@@ -7,20 +7,7 @@
 
 
   <div>
-    <h2>
-      Today's Schedule
-    </h2>
-
-      <!--{{#if job.length}}
-      <h3>Service Notes</h3>..>-->
-      {{#each jobs as |job| }}
-      <p>
-
-      {{ job.note }}
-      </p>
-      {{/each}}<!--
-      {{/if}}-->
-
+    <h2>Today's Schedule</h2>
 
       <label for="todo">
         To Do 
@@ -50,4 +37,11 @@
       <br/>
       <br/>
 
+  </div>
+
+  <div>
+   <h2> Job Details </h2>
+      Date: {{date}} <br />
+      KMs Travelled: {{k_travelled}} <br />
+      Service Notes: {{note}}
   </div>
