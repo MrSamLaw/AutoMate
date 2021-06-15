@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Staff, Job } = require('../../models');
+const { Staff, Job, Service, Vehicle } = require('../../models');
 const withAuth = require('../../utils/auth');
 
 // router.post('/', async (req, res) => {
@@ -63,11 +63,24 @@ router.get('/:id', withAuth, async (req, res) => {
     });
     const jobs = jobData.get({plain: true});
 
-  console.log(jobs);
+    const vehicleData = await Vehicle.findOne();
+    ({
+      where: {vehicle_id: jobs.vehicle_id}
+    });
+    const vehicle = vehicleData.get({plain: true});
+
+    const serviceData = await Service.findOne();
+    ({
+      where: {service_id: jobs.service_id}
+    });
+    const service = serviceData.get({plain: true});
+
 
     res.render('staffDash', {
       ...staff,
       ...jobs,
+      ...vehicle,
+      ...service,
       logged_in: req.session.logged_in,
       staff: req.session.staff
     });
