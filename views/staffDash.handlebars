@@ -5,10 +5,9 @@
     </h2>
   </div>
 
+<div class = "row">
+  <div class= "col-md-5">
 
-<main>
-
-  <div>
     <h2>Today's Schedule</h2>
 
     <div>
@@ -16,7 +15,7 @@
         To Do 
       </label>
       <br />
-      <textarea id="todo" name="todo" rows="2" cols="30">
+      <textarea id="todo" name="todo" rows="5" cols="50">
       {{todo}}
       </textarea>
       <br/>
@@ -30,7 +29,7 @@
         Incoming Cars:
       </label>
       <br />
-      <textarea id="incoming" name="incoming" rows="5" cols="30">
+      <textarea id="incoming" name="incoming" rows="5" cols="50">
       {{incoming}}
       </textarea>
       <br/>
@@ -44,7 +43,7 @@
         Completed Cars:
       </label>
       <br />
-      <textarea id="completed" name="completed" rows="2" cols="30">
+      <textarea id="completed" name="completed" rows="5" cols="50">
       {{completed}}
       </textarea>
       <br/>
@@ -57,14 +56,18 @@
 
   </div>
 
-</main>
-  
-</div>
 
+  <div class= "col-md-5">
 
-  <div>
    <h2> Job Details </h2>
+      Vehicle Rego: {{rego}} <br />
+      Vehicle Type: {{make}} {{model}} <br />
       Date: {{date}} <br />
       KMs Travelled: {{k_travelled}} <br />
+      Service Required: {{name}} <br />
+      Service Price: {{price}} <br />
       Service Notes: {{note}}
+
+
+  </div>
   </div>

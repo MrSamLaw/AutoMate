@@ -101,3 +101,11 @@ li {
       max-width: 300px;
     }
   }
+
+  .row{
+      justify-content: center;
+  }
+
+  .col-md-5{
+      margin-left: 40px;
+  }

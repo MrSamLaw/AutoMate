@@ -9,5 +9,7 @@ router.use('/staff', staffRoutes);
 router.use('/customer', customerRoutes);
 //router.use('/job', customerRoutes);
 router.use('/jobs', customerRoutes);
+router.use('/vehicle', customerRoutes);
+router.use('/service', customerRoutes);
 
 module.exports = router;
