@@ -1,3 +1,27 @@
+
+const searchClient = document.querySelector("#searchclient");
+const clientName = document.querySelector("#client-name");
+searchClient.addEventListener("click", clientSearch);
+async function clientSearch() {
+  console.log("search button was clicked");
+  console.log("client name", clientName.value);
+  const cname = clientName.value;
+  const response = await fetch(`/api/client`, {
+    method: 'GET',
+    // body: JSON.stringify({
+    //   cname
+    // }),
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  });
+  if (response.ok) {
+    document.location.replace('/');
+  } else {
+    alert('Route rejecteddddd');
+  }
+}
+
 async function newFormHandler(event) {
     console.log("got hereeeee");
     event.preventDefault();

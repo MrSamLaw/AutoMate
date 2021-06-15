@@ -1,50 +1,46 @@
-    <!-- This is the form for adding a new client -->
+<!--This is the form for adding a new client-->
+  <divclass="container">
   <div class="add-client-container">
     <h1>Search for a client</h1>
-    <input placeholder="search for client by name"></input>
-  <button>search</button>
-
+    <input id="client-name" placeholder="search for client by name"></input>
+<!-- -->
+      <button id="searchclient">search</button>
+    <!-- -->
     <br>
     <h2>
       Add a client!
     </h2>
     <form class="new-client-form">
-
       <label for="client_name">
         Client Name:
-      </label>
-      <br />
-      <textarea id="client_name" name="client_name" rows="2" cols="30"></textarea>
-      <br />
-
-      <label for="address">
+       </label>
+       <br/>
+       <textareaid="client_name"name="client_name"rows="2"cols="30"></textarea>
+       <br/>
+       <labelfor="address">
         Address:
-      </label>
-      <br />
-      <textarea id="address" name="address" rows="2" cols="30"></textarea>
-      <br />
-      <br />
-
-      <label for="phone">
+       </label>
+       <br/>
+       <textareaid="address"name="address"rows="2"cols="30"></textarea>
+       <br/>
+       <br/>
+       <labelfor="phone">
         Phone:
-      </label>
-      <br />
-      <textarea id="phone" name="phone" rows="2" cols="30"></textarea>
-      <br />
-
-      <label for="dob">
+       </label>
+       <br/>
+       <textareaid="phone"name="phone"rows="2"cols="30"></textarea>
+       <br/>
+       <labelfor="dob">
         DOB:
-      </label>
-      <br />
-      <input type="text" id="dob" name="dob" rows="2" cols="30"></input>
-      <br />
-
-
-      <button type="submit" value="Submit">
+       </label>
+       <br/>
+       <inputtype="text"id="dob"name="dob"rows="2"cols="30"></input>
+       <br/>
+       <buttontype="submit"value="Submit">
         Submit
-      </button>
+       </button>
     </form>
   </div>
 </div>
-
-<script src="/public/add-client.js"></script>
+</div>
+<script src="js/add-client.js"></script>
