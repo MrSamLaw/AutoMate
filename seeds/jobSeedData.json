@@ -3,18 +3,24 @@
         "date": "2021-03-01",
         "k_travelled": 5000,
         "vehicle_id": 1,
-        "note": "Replacement tyres were recommended to the customer."
+        "note": "Replacement tyres were recommended to the customer.",
+        "service_id": 1,
+        "staff_id" : 1
     },
     {
         "date": "2021-06-07",
         "k_travelled": 10000,
         "vehicle_id": 3,
-        "note": "Vehicle passed safety checks."
+        "note": "Vehicle passed safety checks.",
+        "service_id": 2,
+        "staff_id" : 2
     },
     {
         "date": "2021-01-25",
         "k_travelled": 2000,
         "vehicle_id": 2,
-        "note": "Replacement tyres were recommended to the customer."
+        "note": "Replacement tyres were recommended to the customer.",
+        "service_id": 3,
+        "staff_id" : 3
     }
 ]
