@@ -57,8 +57,17 @@ router.get('/:id', withAuth, async (req, res) => {
     const staffData = await Staff.findByPk(req.params.id);
     const staff = staffData.get({plain: true});
 
+    const jobData = await Job.findOne();
+    ({
+      where: {staff_id: req.params.id}
+    });
+    const jobs = jobData.get({plain: true});
+
+  console.log(jobs);
+
     res.render('staffDash', {
       ...staff,
+      ...jobs,
       logged_in: req.session.logged_in,
       staff: req.session.staff
     });

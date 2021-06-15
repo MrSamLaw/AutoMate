@@ -11,16 +11,15 @@
       Today's Schedule
     </h2>
 
-      {{#if jobs.length}}
-      <h3>Service Notes</h3>
+      <!--{{#if job.length}}
+      <h3>Service Notes</h3>..>-->
       {{#each jobs as |job| }}
       <p>
-      {{ job.date }}
-      {{ job.k_travelled }}
+
       {{ job.note }}
       </p>
-      {{/each}}
-      {{/if}}
+      {{/each}}<!--
+      {{/if}}-->
 
 
       <label for="todo">
