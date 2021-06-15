@@ -9,6 +9,6 @@ router.use('/vehicle', vehicleRoutes);
 router.use('/staff', staffRoutes);
 router.use('/customer', customerRoutes);
 router.use('/job', jobRoutes);
-//router.use('/jobs', jobRoutes);
+router.use('/jobs', jobRoutes);
 
 module.exports = router;

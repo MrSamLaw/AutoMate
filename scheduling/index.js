@@ -22,8 +22,8 @@ let transporter = nodemailer.createTransport({
     port: 587,
     secure: false,
     auth: {
-        user: 'automatemechanic@outlook.com',
-        pass: 'Automate123!'
+        user: process.env.MAIL_EMAIL,
+        pass: process.env.MAIL_PASSWORD
     }
 });
 
