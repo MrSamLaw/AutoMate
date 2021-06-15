@@ -52,9 +52,17 @@ img{
     display: flex;
 }
 
+#logout {
+    border: none;
+    background-color: #1E2633;
+    color: #f8d9b2;
+}
+
 .card {
     max-width: 45%;
     display: inline-block;
+    margin-left: 30px;
+    margin-right: 30px;
 }
 
 .card-body {
